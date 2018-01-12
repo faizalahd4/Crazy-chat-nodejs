@@ -1,0 +1,53 @@
+<header>
+<table width="100%">
+  <tr>
+    <td align="center" valign="middle" width="10" nowrap="nowrap"  class="wh">
+        <a href="#menu"><i class='fa fa-chevron-left'></i></a>
+    </td>
+    <td align="center" valign="middle" width="30" nowrap="nowrap">
+      <a href="#dp">
+        <img class='profile-pix' src='http://i.dailymail.co.uk/i/pix/2013/09/24/article-2431162-183C7B8500000578-412_470x423.jpg' width='45'>
+      </a>
+    </td>
+    <td align="left" valign="middle" width="50%" nowrap="nowrap" class="wh">
+      <a href="#menu">
+        <div ng-bind="profileName"></div>
+        <div style='font-size:11px' ng-bind="userStatus" id="userStatus"></div>
+      </a>
+    </td>
+    <td align="right" id="header-icons"  nowrap="nowrap">
+      <i class="fa fa-volume-up pt" ng-click="changeMute(true);" ng-show="mute == 'off'"></i>
+      <i class="fa fa-volume-off pt" ng-click="changeMute(false);" ng-show="mute == 'on'"></i>
+      <a href="#menu">
+        <i class="fa fa-ellipsis-v pt"></i>
+      </a>
+    </td>
+    <td width="20">&nbsp;</td>
+  </tr>
+</table>
+</header>
+<script>
+$(document).ready(function(){
+  $('#menu').mmenu({
+    navbar: {
+      title: localStorage.getItem("userName")
+    },
+    extensions: ["multiline", "pagedim-black", "fullscreen"],
+    navbars   : true,
+    offCanvas: {
+      position: "left"
+    }
+  });
+  $('#dp').mmenu({
+    extensions: ["multiline", "pagedim-black"],
+    navbar: {
+      title: "Profile"
+    },
+    autoHeight: true,
+    offCanvas: {
+      position  : "top",
+      zposition : "front"
+    }
+  });
+});
+</script>

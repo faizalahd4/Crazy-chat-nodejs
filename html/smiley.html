@@ -1,0 +1,24 @@
+<div id="smiley-container" class="arrow-bottom" ng-show="showTag">
+  <div class="smiley-header">
+  <table width="100%" ng-init="smiley0 = false; smiley1 = true;smiley2 = false;smiley3 = false;smiley4 = false;smiley5 = false; smiley1 = false; 
+  smileybox = true">
+  <tbody>
+  	<tr>
+    <td width="16%"><img ng-src="smiley/smiley/4.png" class="smiley" src="smiley/smiley/4.png" ng-click="toggleSmiley('smiley1');"></td>
+    <td width="16%"><img ng-src="smiley/smiley/4.png" class="smiley" src="smiley/smiley/4.png" ng-click="toggleSmiley('smiley2');"></td>
+    <td width="16%"><img ng-src="smiley/smiley/4.png" class="smiley" src="smiley/smiley/4.png" ng-click="toggleSmiley('smiley3');"></td>
+    <td width="16%"><img ng-src="smiley/smiley/4.png" class="smiley" src="smiley/smiley/4.png" ng-click="toggleSmiley('smiley4');"></td>
+    <td width="16%"><img ng-src="smiley/smiley/4.png" class="smiley" src="smiley/smiley/4.png" ng-click="toggleSmiley('smiley5');"></td>
+    <td width="17%"><img ng-src="smiley/smiley/4.png" class="smiley" src="smiley/smiley/4.png" ng-click="toggleSmiley('smiley6');"></td>
+    </tr>
+</tbody>
+</table>
+</div>
+  <div class="smiley-content">
+    <center><ul ng-repeat="folders in options track by $index" id="smiley{{$index}}" class="smiley-all" ng-class="{'dn': !$first}">
+      <li ng-repeat="smiley in folders">
+      	<img ng-src="{{smiley}}" class="smiley" ng-click="sendSmiley(smiley)"/>
+      </li>
+    </ul></center>
+  </div>
+</div>

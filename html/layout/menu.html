@@ -1,0 +1,128 @@
+<!-- SUB MENUS - STARTS -->
+<nav id="menu">
+  <ul>
+    <li><a href="#photo-troll-container" ng-click="openContainer('', 'photo-troll-container');"><i class="fa fa-camera"></i>&nbsp;&nbsp;Photo Troll</a></li>
+    <li><a href="#audio-box" ng-click="openContainer('', 'audio-box');"><i class="fa fa-music"></i>&nbsp;&nbsp;Music</a></li>
+    <li><a><i class="fa fa-cog"></i>&nbsp;&nbsp;Settings</a>
+      
+      <!-- SETTING MENUS - STARTS -->
+      <ul>
+        <li class="Divider">&nbsp;</li>
+        <li>
+          <a class="mm-arrow">Name<span class="Counter mm-counter-right">{{profileName}}</span></a>
+            <!-- CHANGE NAME MENUS - STARTS -->
+            <ul>
+              <li><br/><center><input type="text" ng-model="profileNameChanged"><br/><br/></center></li>
+              <li><br/><center><a href="#mm-2" class="btnp" ng-click="changeName(profileNameChanged);">Change Name</a><br/><br/></center></li>
+            </ul>
+            <!-- CHANGE NAME MENUS - ENDS -->
+        </li>
+        <li id="setting-radius">
+          <em class="Counter">Status</em>
+          <a href="#radius" class="mm-arrow">I am Super</a>
+        </li>
+        <li class="Divider Spacer">Personal Settings</li>
+          <li>
+            <a class="mm-arrow">Notification On / Off<span class="Counter mm-counter-right caps">{{notification}}</span></a>
+              <!-- NOTIFICATION MENUS - STARTS -->
+              <ul>
+                <li><a href="#mm-2" ng-click="changeNotification(true);">On</a></li>
+                <li><a href="#mm-2" ng-click="changeNotification(false);">Off</a></li>
+              </ul>
+              <!-- NOTIFICATION MENUS - ENDS -->
+          </li>
+          <li>
+            <a class="mm-arrow">Mute<span class="Counter mm-counter-right caps">{{mute}}</span></a>
+              <!-- MUTE MENUS - STARTS -->
+              <ul>
+                <li><a href="#mm-2" ng-click="changeMute(true);">On</a></li>
+                <li><a href="#mm-2" ng-click="changeMute(false);">Off</a></li>
+              </ul>
+              <!-- MUTE MENUS - ENDS -->
+          </li>
+          <li>
+            <a class="mm-arrow">Theme<span class="Counter mm-counter-right caps">{{themeColor}}</span></a>
+              <!-- PROFILE MENUS - STARTS -->
+              <ul class="themes">
+                <li><a href="#mm-2" ng-click="changeTheme('blue');">Blue<!-- <span class="blue"></span> --></a></li>
+                <li><a href="#mm-2" ng-click="changeTheme('green');">Green<!-- <span class="green"></span> --></a></li>
+                <li><a href="#mm-2" ng-click="changeTheme('purple');">Purple<!-- <span class="purple"></span> --></a></li>
+                <li><a href="#mm-2" ng-click="changeTheme('orange');">Orange<!-- <span class="orange"></span> --></a></li>
+                <li><a href="#mm-2" ng-click="changeTheme('yellow');">Yellow<!-- <span class="yellow"></span> --></a></li>
+                <li><a href="#mm-2" ng-click="changeTheme('greenSea');">Green sea<!-- <span class="greenSea"></span> --></a></li>
+                <li><a href="#mm-2" ng-click="changeTheme('navBlue');">Navy blue<!-- <span class="navyBlue"></span> --></a></li>
+              </ul>
+              <!-- THEME MENUS - ENDS -->
+          </li>
+          <li>
+            <a class="mm-arrow">Font size<span class="Counter mm-counter-right caps">{{fontSize}}</span></a>
+              <!-- FONT SIZE MENUS - STARTS -->
+              <ul>
+                <li><a href="#mm-2" ng-click="changeFontSize('small');">Small</a></li>
+                <li><a href="#mm-2" ng-click="changeFontSize('medium');">Medium</a></li>
+                <li><a href="#mm-2" ng-click="changeFontSize('large');">Large</a></li>
+              </ul>
+              <!-- FONT SIZE MENUS - ENDS -->
+          </li>
+          <li>
+            <span>Chat backup</span><em class="Counter">Not Available</em><!-- <input type="checkbox" class="Toggle" /> -->
+          </li>
+          <li class="Divider Spacer">Privacy</li>
+          <li>
+            <a class="mm-arrow">Last seen<span class="Counter mm-counter-right">{{lastSeen}}</span></a>
+              <!-- LAST SEEN PRIVACY MENUS - STARTS -->
+              <ul>
+                <li><a href="#mm-2" ng-click="changePrivacy('EveryOne', 'lastSeen');">EveryOne</a></li>
+                <li><a href="#mm-2" ng-click="changePrivacy('My Friends', 'lastSeen');">My Friends</a></li>
+                <li><a href="#mm-2" ng-click="changePrivacy('Nobody', 'lastSeen');">Nobody</a></li>
+              </ul>
+              <!-- LAST SEEN PRIVACY MENUS - ENDS -->
+          </li>
+          <li>
+            <a class="mm-arrow">Profile photo<span class="Counter mm-counter-right">{{dpPrivacy}}</span></a>
+              <!-- DP PRIVACY MENUS - STARTS -->
+              <ul>
+                <li><a href="#mm-2" ng-click="changePrivacy('EveryOne', 'dpPrivacy');">EveryOne</a></li>
+                <li><a href="#mm-2" ng-click="changePrivacy('My Friends', 'dpPrivacy');">My Friends</a></li>
+                <li><a href="#mm-2" ng-click="changePrivacy('Nobody', 'dpPrivacy');">Nobody</a></li>
+              </ul>
+              <!-- DP PRIVACY MENUS - ENDS -->
+          </li>
+          <li>
+            <a class="mm-arrow">Status<span class="Counter mm-counter-right">{{statusPrivacy}}</span></a>
+              <!-- STATUS PRIVACY MENUS - STARTS -->
+              <ul>
+                <li><a href="#mm-2" ng-click="changePrivacy('EveryOne', 'statusPrivacy');">EveryOne</a></li>
+                <li><a href="#mm-2" ng-click="changePrivacy('My Friends', 'statusPrivacy');">My Friends</a></li>
+                <li><a href="#mm-2" ng-click="changePrivacy('Nobody', 'statusPrivacy');">Nobody</a></li>
+              </ul>
+              <!-- STATUS PRIVACY MENUS - ENDS -->
+          </li>
+      </ul>
+      <!-- THEME MENUS - STARTS -->
+    </li>
+    <li><a><i class="fa fa-question-circle"></i>&nbsp;&nbsp;Help</a>
+      <!-- HELP MENUS - STARTS -->
+      <ul>
+        <li class="Divider">&nbsp;</li>
+        <li><a href="#/">Blending emotion with aggression in a speech that had her invoking a Roman philosopher, accusing rivals of political opportunism over a “child’s death”</a></li>
+        <li><a href="#/">Twenty-five years after her arrest, Nalini — a convict in the Rajiv Gandhi assassination case — visited her home and relatives on a 12-hour parole Wednesday.</a></li>
+        <li><a href="#/">Twenty-five years after her arrest, Nalini — a convict in the Rajiv Gandhi assassination case — visited her home and relatives on a 12-hour parole Wednesday.</a></li>
+        <li><a href="#/">Twenty-five years after her arrest, Nalini — a convict in the Rajiv Gandhi assassination case — visited her home and relatives on a 12-hour parole Wednesday.</a></li>
+      </ul>
+      <!-- HELP MENUS - ENDS -->
+    </li>
+    <li><a href="#" ng-click="logout()"><i class="fa fa-sign-out" ng-click="logout()"></i>&nbsp;&nbsp;Logout</a></li>
+    <li><a href="#chat-window"><i class='fa fa-chevron-left'></i>&nbsp;&nbsp;Back</a></li>
+  </ul>
+</nav>
+
+<!-- PROFILE MENUS - STARTS -->
+<nav id="dp" class="Panel">
+  <ul>
+      <li><center><a href="#/"><img class='profile-pix' src='http://i.dailymail.co.uk/i/pix/2013/09/24/article-2431162-183C7B8500000578-412_470x423.jpg' width='500'></a></center></li>
+  </ul>
+</nav>
+<!-- PROFILE MENUS - ENDS -->
+</div>
+<!-- SUB MENUS - ENDS -->
